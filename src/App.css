@@ -39,7 +39,7 @@ li {
 
 .album-art {
     position: relative;
-    margin: 20px;
+    margin: 20px 50px;
 }
 
 .album-art img {
@@ -87,6 +87,6 @@ p {
 
 .songTitle {
     position: relative;
-    left: 25%;
+    left: 28%;
     font-size: 22px;
 }
