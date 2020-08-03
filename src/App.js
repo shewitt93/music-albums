@@ -46,7 +46,7 @@ class App extends React.Component {
             },
             {
                 id: 6,
-                name: 'The Emmpty Restaurant',
+                name: 'The Empty Restaurant',
                 album: "Spirited Away"
             },
             {
@@ -111,52 +111,57 @@ class App extends React.Component {
                 <div className="album">
                     <h3>Spirited Away</h3>
                     <p>{saDescription}</p>
-                    <span className="song">Songs</span>
-                    <ul>
-                        {artists.filter(name => name.album === "Spirited Away").map(filteredName => (
-                            <li>
-                                {filteredName.name}
-                            </li>
-                        ))}
-                    </ul>
                 </div>
 
                 <div className="album">
                     <h3>Howl's Moving Castle</h3>
                     <p>{hmcDescription}</p>
-                    <span className="song hmc">Songs</span>
-                    <ul className="howl">
-                        {artists.filter(name => name.album === "Howl's Moving Castle").map(filteredName => (
-                            <li>
-                                {filteredName.name}
-                            </li>
-                        ))}
-                    </ul>
                 </div>
 
                 <div className="album">
                     <h3>My Neighbour Totoro</h3>
                     <p>{mntDescription}</p>
-                    <span className="song">Songs</span>
-                    <ul className="totoro">
-                        {artists.filter(name => name.album === "My Neighbour Totoro").map(filteredName => (
-                            <li>
-                                {filteredName.name}
-                            </li>
-                        ))}
-                    </ul>
+                </div>
+
+            </div>
+
+            <div className="songs-list">
+
+                <div className="song">
+                    <span className="songTitle">Songs</span>
+                        <ul>
+                            {artists.filter(name => name.album === "Spirited Away").map(filteredName => (
+                                <li>
+                                    {filteredName.name}
+                                </li>
+                            ))}
+                        </ul>
+                </div>
+
+                <div className="song">
+                    <span className="songTitle">Songs</span>
+                        <ul>
+                            {artists.filter(name => name.album === "Howl's Moving Castle").map(filteredName => (
+                                <li>
+                                    {filteredName.name}
+                                </li>
+                            ))}
+                        </ul>
+                </div>
+
+                <div className="song">
+                    <span className="songTitle">Songs</span>
+                        <ul>
+                            {artists.filter(name => name.album === "My Neighbour Totoro").map(filteredName => (
+                                <li>
+                                    {filteredName.name}
+                                </li>
+                            ))}
+                        </ul>
                 </div>
 
             </div>
         
-{/* 
-            <h2>Songs</h2>
-            <ul>
-                {artists.map(item => { 
-                    return <li key={item.id}>{item.name}</li>;
-                })}
-            </ul> */}
-
         </main>
 
       )
